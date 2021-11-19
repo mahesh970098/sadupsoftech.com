@@ -9,7 +9,7 @@
 /*=============== NAV ===============*/
 
 .modal-c-tabs{
-  background-image: url(../../../assets/professional-2-background-for-zoom-or-teams-unsplash.jpg);
+  background-image: url(../../assets/professional-2-background-for-zoom-or-teams-unsplash.jpg);
   background-image: no-repeat;
   background-position: center;
   background-size: cover;
@@ -263,7 +263,7 @@ font-size: 50px;
 }
 
 .aboutbanner{
-  background-image: url('../../../assets/bd01.jpg');
+background-image: url(../../assets/bd01.jpg);
   height:40vh;
   background-image: no-repeat;
   background-position: center;
@@ -282,7 +282,7 @@ padding-top: 60px;
 
 .parallax {
   /* The image used */
-  background-image: url("../../../assets/aboutimg001.jpg");
+  background-image:url(../../assets/aboutimg001.jpg);
 
   /* Set a specific height */
   min-height: 600px;
