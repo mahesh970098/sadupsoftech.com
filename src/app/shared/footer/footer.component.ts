@@ -22,6 +22,6 @@ export class FooterComponent implements OnInit {
   }
 
   addmessage(form:NgForm){
-    alert("added");
+    alert("Sucess" + JSON.stringify(this.feed.value));
   }
 }
