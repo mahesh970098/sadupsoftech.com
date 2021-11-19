@@ -1,0 +1,577 @@
+
+
+<nav class="navbar  navbar-expand-md sticky-top">
+
+
+  <div class="container start">
+    <a class="navbar-brand" href="#">SADUP SOFT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav pull-right">
+              <li class="nav-item">
+                  <a class="nav-link active-link" href="#home">HOME</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#services">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#clients">CLIENTS</a>
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="text-center">
+            <a href="" class="btn btn-dark" data-toggle="modal" data-target="#modalLRForm">LogIn/Register</a>
+
+
+          </div>
+          </ul>&nbsp;
+      </div>
+
+  </div>
+
+
+</nav>
+
+
+
+
+
+
+
+
+<!-- ==================form================ -->
+
+
+
+
+    <!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active loginnav" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link singnav" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <form  name="addform" #addform="ngForm" [formGroup]="loginform" (ngSubmit)="onsubmit()">
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" class="form-control" placeholder="Enter email" name="email"
+                                    #email="ngModel" [(ngModel)]="loginform"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                <span style="color: red;"
+                                    *ngIf="(email.errors?.required && email.touched) || (email.errors?.required && addform.submitted)">
+                                    Enter a valid email</span>
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info" data-dismiss="modal"  [disabled]="addform.valid">Log in</button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+            </form>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info"  data-dismiss="modal">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+<!--
+<div class="text-center">
+  <a href="" class="btn btn-dark" data-toggle="modal" data-target="#modalLRForm">LogIn/Register</a>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- =============================home================== -->
+
+
+<div class="bd-example" id="home">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators my-4">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../../assets/office01.jpg" class="d-block w-100" alt="...">
+
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/office02.jpg" class="d-block w-100" alt="...">
+
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/assementloginimg.jpg" class="d-block w-100" alt="...">
+
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="container-fluid about001">
+  <div class="row">
+
+    <div class="col-md-6 parahome">
+     <div class="para01">
+      <h4 style="font-size: 35px; ">OUR VALUES AND GOALS</h4>
+
+      <p>Sadup Softech Private Limited goal is to provide the best service to our clients. By implementing cutting-edge technology
+        in every industry, we not only help our clients improve their businesses, but we also keep them ahead of the competition.</p>
+
+        </div>
+
+    </div>
+
+<div class="col-md-6">
+
+<br>
+<img class="homediv" src="../../../assets/assementloginimg.jpg">
+
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+
+<!-- ===================About us==============================-->
+
+
+
+<div class="about" id="about">
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<div class="container aboutcon">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="aboutimg" src="../../../assets/aboutbanner.jpg" alt="img">
+        </div>
+        <div class="col-md-6 parahome">
+            <h3>About SADUP SOFT</h3><br>
+            <p>Sadup Softech Private Limited is a young digital transformation company that is driven by a vision to grow. Led by
+              highly-qualified, experienced and dynamic result-oriented individuals, Sadup uses unique processes to identify alternative
+               solutions that will help you achieve your business goals. While bridging the marketing and IT gap, we also
+              reimagine technology to accelerate your business and help you approach your technological requirements with a fresh mindset.</p>
+        </div>
+
+    </div>
+</div>
+</div>
+<br><br>
+
+<!--
+=================================services============================= -->
+
+
+ <div id="services"></div>
+
+<section id="servi">
+  <div class="parallax">
+      <div class="container-fluid allboxes">
+          <div class="row">
+              <div class="col-md-4 firstbox">
+                  <p id="p"><b>OUR SERVICES:</b></p>
+                  <p style="text-align: center;  "><strong>our services make your dream bright</strong>
+                  </p>
+              </div>
+              <div class="col-md-4 ">
+                  <div class="one1">
+                      <h4><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STAFFING&nbsp;&nbsp;&nbsp;</b>
+                      </h4>
+                      <div class="servicebox">
+                          <a><i class="fas fa-briefcase fa-2x"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="one">
+                      <h4><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;online &nbsp;coding </b></h4>
+                      <div class="servicebox">
+                          <a><i class="fab fa-java fa-2x"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="one">
+                      <h4 style="margin-left:-30px ;"><b>engineering services</b></h4>
+                      <div class=" servicebox">
+                          <a><i class="fab fa-cloudsmith fa-2x"></i></a>
+                      </div>
+                  </div>
+
+              </div>
+
+
+              <div class="col-md-4  outerbox1">
+
+                  <div class="one">
+                      <div class="servicebox">
+                          <a><i class="fab fa-html5 fa-2x"></i></a>
+                      </div>
+                      <h4><b>web development</b></h4>
+                  </div>
+
+                  <div class="one">
+                      <div class="servicebox">
+                          <a><i class="fas fa-cloud-download-alt fa-2x"></i></a>
+                      </div>
+                      <h4 style="margin-top:10px"><b>DIGITAL MARKETING </b></h4>
+                  </div>
+
+                  <div class="one">
+                      <div class="servicebox">
+                          <a><i class="fas fa-bullhorn fa-2x wow bounceIn"></i></a>
+                      </div>
+                      <h4><b>CONSULTATION</b></h4>
+                  </div>
+              </div>
+
+
+
+
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<br>
+<br>
+
+<!-- =======================gallery================== -->
+
+
+
+<div class="allcards" id="gallery">
+  <div class="container cards">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+              <div class="card  wow slideInLeft">
+                  <img src="../../../../assets/Web-Development-and-Web-Design-Company.png" class="card-img-top"
+                      alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align: center;">Web designing</h5>
+                      <p class="card-text">
+                          Web design refers to the design of websites that are displayed on the internet. It
+                          usually
+                          refers to the user experience aspects of website development rather than software
+                          development. Web design used to be focused on designing websites for desktop browsers
+                      </p>
+
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+
+
+                  </div>
+              </div>
+          </div>
+          <div class="col  wow slideInDown "><br>
+              <div class="card ">
+                  <img src="../../../../assets/Web-mobile-development-banner-06.jpg" class="card-img-top"
+                      alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align: center;">Web Development</h5>
+                      <p class="card-text">Web development is the building and maintenance of websites; it's the
+                          work
+                          that happens behind the scenes to make a website look great, work fast and perform well
+                          with
+                          a seamless user experience.
+                      </p>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card  wow slideInRight ">
+                  <img src="../../../../assets/digital-marketing-content-planning-advertising-strategy-concept-digital-marketing-content-planning-advertising-strategy-concept-102190826.jpg"
+                      class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">Digital marketing</h5>
+                      <p class="card-text">
+                          Digital marketing is the component of marketing that utilizes internet and online based
+                          digital technologies such as desktop computers, mobile phones and other digital media
+                          and
+                          platforms to promote products and services.
+                      </p>
+
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card  wow slideInLeft">
+                  <img src="../../../assets/unique.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">Graphic design</h5>
+                      <p class="card-text">
+                          Graphic design is the art, profession and academic discipline whose activity consists in
+                          projecting visual communications intended to transmit specific messages to social
+                          groups,
+                          with specific objectives.
+                      </p>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+
+                  </div>
+              </div>
+          </div>
+          <div class="col"><br><br>
+              <div class="card wow slideInUp ">
+                  <img src="../../../../assets/angular_01.png" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">Angular</h5>
+                      <p class="card-text">
+                          AngularJS is a open-source front-end web framework mainly maintained by
+                          Google and by a community of individuals
+                          encountered in developing single-page applications.
+                      </p>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col"><br>
+              <div class="card wow slideInRight">
+                  <img src="../../../../assets/javascript.png" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">JAVA Script</h5>
+                      <p class="card-text">
+                          This is a longer card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.
+                      </p>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <button type="button" class="btn btn-primary"><a [routerLink]="['/course']"
+                              routerLinkActive="router-link-active" style="color: white; text-decoration: none; ">View
+                              courses</a>
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+
+
+      </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===============================TESTmonial======================= -->
+
+<h4 class="testm">TESTIMONIALS FEEDBACK</h4>
+<p class="testm2">What our clients think</p>
+
+<div class="couresol">
+  <div class="container">
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="https://i.imgur.com/lE89Aey.jpg">
+                    <div id="image-caption">Nick Doe</div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+                    <div id="image-caption">Cromption Greves</div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+                    <div id="image-caption">Harry Mon</div>
+                </div>
+            </div>
+        </div> <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
+    </div>
+</div>
+
+</div>
+<br>
+<br>
+
+<!-- =========================clients=============== -->
+<h5  class="testm"id="clients">CLIENTS</h5>
+<p class="testm2">Our Partners/ Our Clients</p>
+
+
+
+
+<div class="row">
+  <div class="container-fluid">
+    <section class="logo-carousel slider" data-arrows="true">
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png"></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"></div>
+    </section>
+  </div>
+</div>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>

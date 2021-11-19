@@ -1,0 +1,194 @@
+.footer{
+  background-color: rgb(0, 0, 49);
+  height: 300px;
+  color: white;
+}
+
+.testf{
+  color: aqua;
+  font-size: 20px;
+}
+
+/* .contactbanner{
+  background-image: url('../../../../../assets/images/bd1 (1).jpg');
+  height:190vh;
+  background-image: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+} */
+.sec{
+height:25%;
+padding-top: 60px;
+}
+.sec2{
+  background:rgba(77, 78, 76, 0.251);
+  height:15%;
+  padding-top: 50px;
+}
+.phn{
+  text-align: center;
+
+}
+.fa{
+  font-size: 50px;
+}
+a{
+  color: black;
+}
+a:hover{
+  color: blue;
+}
+.fdbk{
+  background:whitesmoke;
+  padding-top: 100px;
+  height: 60%;
+
+}
+.map{
+  padding-left: 50px;
+  padding-top: 20px;
+
+}
+
+
+.foot {
+border-radius: 50px;
+padding: 20px;
+
+}
+.md-form{
+background-color: rgb(255, 255, 255);
+}
+
+.button{
+color: blueviolet;
+
+}
+.form-control{
+border-radius: 20px;
+}
+label{
+padding-left: 15px;
+}
+.btn{
+margin-left:100px;
+display:block;
+padding:10px;
+border-radius: 20px;
+width:300px;
+cursor:pointer;
+}
+.frm{
+
+box-shadow: 0 0 15px  black;
+border-radius: 20px;
+padding:30px ;
+width:200;
+height:100%;
+
+}
+span{
+font-size: larger;
+}
+/* .frm{
+  background-image: url('../../../../../assets/images/login.jpg');
+
+} */
+label{
+  color: whitesmoke;
+}
+h4{
+  color: whitesmoke;
+  margin-left: 30px;
+}
+
+.content{
+  justify-content: center;
+  padding: 80px;
+
+}
+
+li{
+  margin-left: 50px;
+}
+
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9*/
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+
+.btn{
+
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100px;
+}
+
+.fotlink{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.fotlink:hover{
+  color: rgb(0, 247, 255);
+}
+.fas1 a{
+
+  color: aliceblue;
+
+
+}
+
+
+
+
+.fas1 a:hover{
+color:darkgoldenrod;
+}
+@media screen and (max-width: 1178px)and (min-width:10px) {
+
+ iframe{
+   width: 1remx;
+   height: 10px;
+ }
+
+ .btn-primary{
+   width: fit-content;
+ }
+ .footer{
+   background-color: rgb(1, 0, 29);
+   height: 800px;
+ }
+
+
+}
+
+
+
+
+
+
+
+
+
